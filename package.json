@@ -1,0 +1,24 @@
+{
+  "name": "devfortech_webservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MeneMateus/DevForTech_WebService.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MeneMateus/DevForTech_WebService/issues"
+  },
+  "homepage": "https://github.com/MeneMateus/DevForTech_WebService#readme",
+  "dependencies": {
+    "http": "^0.0.1-security",
+    "mysql2": "^2.3.3"
+  }
+}
