@@ -14,17 +14,17 @@
       <h1 class=""></h1>
       <br>
       <div class="col">
-        <form action="/create" method="POST">
+        <form action="/create" method="POST" type="application/json">
           <div class="row">
             <div class="col">
               <label class="form-label">Nome:</label>
-              <input class="form-control" type="text" id="nome">
+              <input class="form-control" type="text" id="nome" name="nome">
               <label class="form-label">E-mail:</label>
-              <input class="form-control" type="text" id="email">
+              <input class="form-control" type="text" id="email" name="email">
               <label class="form-label">Idade:</label>
-              <input class="form-control" type="number" id="idade">
+              <input class="form-control" type="number" id="idade" name="idade">
               <label class="form-label">Genero:</label>
-              <select class="form-select">
+              <select class="form-select" name="genero">
                 <option value="Masculino">Masculino</option>
                 <option value="Feminino">Feminino</option>
               </select>
