@@ -44,43 +44,38 @@ function deleteByEmail(id){
 }
 
 function selectById(id){
-    con.connect(function(err){
-        if(err)throw err;
-        console.log("Conectado");
-        con.query(`select '${id}' from tb_agenda`,function(err,result){
-                if(err)throw err;
-                console.log(result);
-                return result
+    return new Promise((resolve, reject) => {
+        con.query(`select * from tb_agenda where email='${id}'`, (err, result) => {
+            if (err) {
+                reject(err);
+                return;
+            }
+            resolve(result);
         });
     });
 }
 
 function selectByEmail(email) {
-    con.connect(function (err) {
-        if (err) throw err;
-        console.log("Conectado");
-        con.query(`select '${email}' from tb_agenda`, function (err, result) {
-            if (err) throw err;
-            console.log(result);
-            return result
+    return new Promise((resolve, reject) => {
+        con.query(`select * from tb_agenda where email='${email}'`, (err, result) => {
+            if (err) {
+                reject(err);
+                return;
+            }
+            resolve(result);
         });
     });
 }
 
-async function selectAll() {
-    /*con.connect((err) => {
-        if (err) throw err;
-        console.log("Conectado");
-    }).then()*/
-    con.connect(async function (err) {
-        if (err) throw err;
-        console.log("Conectado");
-        let teste = await con.query(`select * from tb_agenda`, function (err, result) {
-            if (err) throw err;
-            console.log(result);
-            return result;
+function selectAll() {
+    return new Promise((resolve, reject) => {
+        con.query(`select * from tb_agenda`, (err, result) => {
+            if (err) {
+                reject(err);
+                return;
+            }
+            resolve(result);
         });
-        console.log("BB"+teste);
     });
 }
 

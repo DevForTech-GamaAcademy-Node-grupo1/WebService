@@ -1,7 +1,7 @@
-let mysql=require('mysql2/promise');
+let mysql=require('mysql2');
 
 //Criando uma conexão 
-let con = await mysql.createConnection({
+let con = mysql.createConnection({
     // Criando as variáveis de conexão no Banco de Dados
     host:"localhost",
     user:"root",
